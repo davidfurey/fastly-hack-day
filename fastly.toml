@@ -1,0 +1,9 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["david@furey.me.uk"]
+description = "My service"
+language = "javascript"
+manifest_version = 2
+name = "fastly-hack-day"
+service_id = ""
