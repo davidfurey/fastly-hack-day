@@ -6,4 +6,9 @@ description = "My service"
 language = "javascript"
 manifest_version = 2
 name = "fastly-hack-day"
-service_id = ""
+service_id = "5Vfm9DUpEIBeD6uPEJxRV4"
+
+[local_server]
+  [local_server.backends]
+    [local_server.backends.dotcom]
+      url = "https://www.theguardian.com"

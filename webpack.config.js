@@ -2,10 +2,11 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.ts",
   optimization: {
     minimize: true
   },
+  mode: "production",
   target: "webworker",
   output: {
     filename: "index.js",
@@ -22,8 +23,28 @@ module.exports = {
         test: /\.(txt|html)/,
         type: "asset/source",
       },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              configFile: 'tsconfig.json',
+            },
+          }
+        ],
+      },
     ],
   },
+  // resolve: {
+  //   fallback: {
+  //     "child_process": false,
+  //     "path": false,
+  //     "fs": false,
+  //     "os": false,
+  //   }
+  // },
   plugins: [
     // Polyfills go here.
     // Used for, e.g., any cross-platform WHATWG, 

@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "typeRoots" : ["./node_modules/@types"],
+    "types": [ "@fastly/js-compute" ],
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "esModuleInterop": false,
+    "target": "es5",
+    "lib": [
+      "es2021",
+      "webworker"
+    ],
+    "jsx": "react",
+    "module": "es6",
+    "moduleResolution": "node",
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true
+  }
+}
